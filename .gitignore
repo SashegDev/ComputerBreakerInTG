@@ -1,4 +1,6 @@
 venv/
+files/botFiles/config.txt
+files/botFiles/computer-list.txt
 ComputerBreakerInTG.code-workspace
 venv/pyvenv.cfg
 venv/Lib/site-packages/pip/__init__.py
@@ -860,3 +862,4 @@ venv/Scripts/pip3.12.exe
 venv/Scripts/pip3.exe
 venv/Scripts/python.exe
 venv/Scripts/pythonw.exe
+files/botFiles/__pycache__/commands.cpython-312.pyc

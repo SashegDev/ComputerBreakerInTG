@@ -2,17 +2,14 @@ import telebot
 import time
 import sys
 import os
+from commands import register_commands
 
-if os.path.exists(os.path.join(os.path.dirname(__file__)))
-with open("files/botfiles/config.txt","w") as f:
-    f.write("token: YOUR_API_TOKEN\n\n")
-    f.write("# это чат-айди, где есть бот(может быть группой), для личный сообщений используйте свое ID\n")
-    f.write("admin: YOUR_ADMIN_ID\n")
+if not os.path.exists(os.path.join(os.path.dirname(__file__),"files/botFiles/config.txt")):
+    with open("files/botFiles/config.txt","w") as f:
+        f.write("token: YOUR_API_TOKEN\n\n")
+        f.write("# это чат-айди, где есть бот(может быть группой), для личный сообщений используйте свое ID\n")
+        f.write("admin: YOUR_ADMIN_ID\n")
 
-# Добавляем путь к директории botFiles в системный путь
-sys.path.append(os.path.join(os.path.dirname(__file__), 'files/botFiles'))
-
-from commands import register_commands  # Импортируем функцию регистрации команд
 
 def read_token_from_config():
     with open('files/botFiles/config.txt', 'r') as f:
@@ -28,7 +25,6 @@ def read_admin_from_config():
                 return line.split(':')[1].strip()
     raise ValueError("Admin not found in config file.")
 
-# Получаем токен
 token = read_token_from_config()
 admin = read_admin_from_config()
 
