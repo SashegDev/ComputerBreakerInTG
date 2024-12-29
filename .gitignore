@@ -863,3 +863,5 @@ venv/Scripts/pip3.exe
 venv/Scripts/python.exe
 venv/Scripts/pythonw.exe
 files/botFiles/__pycache__/commands.cpython-312.pyc
+files/botFiles/config.json
+__pycache__/commands.cpython-312.pyc

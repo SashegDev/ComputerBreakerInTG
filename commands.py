@@ -9,4 +9,4 @@ def register_commands(bot):
 
     @bot.message_handler(commands=['help'])
     def help_command(message):
-        bot.send_message(message.chat.id, "Доступные команды: /hello, /help, /getonline, /ping")
+        bot.send_message(message.chat.id, "Доступные команды: /hello, /help, /pingall, /ping")
